@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
 
         Button b = (Button)findViewById(R.id.button);
+        Button b1 = (Button)findViewById(R.id.button1);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
+            }
+        });
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent n = new Intent(MainActivity.this,Foto.class);
+                startActivity(n);
             }
         });
     }
